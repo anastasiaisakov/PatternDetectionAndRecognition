@@ -11,6 +11,7 @@ pio.renderers.default = "databricks"
 
 data = Data()
 
+
 data.default_states = spark.table(Tables.default_default_states).toPandas()
 data.df = spark.table(Tables.e_f_sdl_maneuver_simulation)[['filename', 'label', 'timestamp', 'value', 'maneuver']]
 
